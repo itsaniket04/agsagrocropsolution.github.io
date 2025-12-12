@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification - AGS Agro Crop Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .verify-container {
+            max-width: 500px;
+            margin: 150px auto 60px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .verify-card {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .icon.success {
+            color: #4a7c2f;
+        }
+
+        .icon.error {
+            color: #dc3545;
+        }
+
+        .icon.loading {
+            color: #666;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        h1 {
+            color: #2d5016;
+            margin-bottom: 1rem;
+        }
+
+        .message {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #4a7c2f 0%, #2d5016 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 124, 47, 0.3);
+        }
+
+        .countdown {
+            color: #999;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="verify-container">
+        <div class="verify-card">
+            <div id="loadingState">
+                <div class="icon loading">⏳</div>
+                <h1>Verifying Your Email...</h1>
+                <p class="message">Please wait while we verify your email address.</p>
+            </div>
+
+            <div id="successState" style="display: none;">
+                <div class="icon success">✓</div>
+                <h1>Email Verified!</h1>
+                <p class="message">
+                    Your email has been successfully verified. You can now login to your account.
+                </p>
+                <a href="login-simple.html" class="btn-primary">Go to Login</a>
+                <p class="countdown">Redirecting in <span id="countdown">5</span> seconds...</p>
+            </div>
+
+            <div id="errorState" style="display: none;">
+                <div class="icon error">✗</div>
+                <h1>Verification Failed</h1>
+                <p class="message" id="errorMessage">
+                    The verification link is invalid or has expired. Please try signing up again.
+                </p>
+                <a href="signup-simple.html" class="btn-primary">Back to Signup</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get token from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get('token');
+
+        async function verifyEmail() {
+            if (!token) {
+                showError('No verification token provided.');
+                return;
+            }
+
+            try {
+                const response = await fetch(`/.netlify/functions/auth-verify?token=${token}`, {
+                    method: 'GET'
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    showSuccess();
+                } else {
+                    showError(data.error || 'Verification failed. The link may have expired.');
+                }
+            } catch (error) {
+                console.error('Verification error:', error);
+                showError('Unable to connect to server. Please try again later.');
+            }
+        }
+
+        function showSuccess() {
+            document.getElementById('loadingState').style.display = 'none';
+            document.getElementById('successState').style.display = 'block';
+
+            // Countdown redirect
+            let seconds = 5;
+            const countdownEl = document.getElementById('countdown');
+
+            const interval = setInterval(() => {
+                seconds--;
+                countdownEl.textContent = seconds;
+
+                if (seconds <= 0) {
+                    clearInterval(interval);
+                    window.location.href = 'login-simple.html';
+                }
+            }, 1000);
+        }
+
+        function showError(message) {
+            document.getElementById('loadingState').style.display = 'none';
+            document.getElementById('errorState').style.display = 'block';
+            document.getElementById('errorMessage').textContent = message;
+        }
+
+        // Start verification on page load
+        verifyEmail();
+    </script>
+</body>
+
+</html>

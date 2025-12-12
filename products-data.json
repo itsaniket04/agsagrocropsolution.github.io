@@ -1,0 +1,457 @@
+{
+    "products": [
+        {
+            "id": "prime-avtar",
+            "name": "Prime Avtar",
+            "slug": "prime-avtar",
+            "category": "organic",
+            "shortDescription": "Plant Growth Promoter for Better Development",
+            "fullDescription": "Prime Avtar is a premium plant growth promoter designed to enhance overall plant development. With a unique blend of Amino Acids and Seaweed extracts, it promotes better flowering, fruit set, and significantly improves both quality and quantity of production.",
+            "composition": "Amino Acid 20% + Seaweed 30%",
+            "benefits": [
+                "Better development & plant growth",
+                "Better flowering & fruit set",
+                "Improves quality & quantity of production",
+                "Enhances resistance to pest & disease attack",
+                "Improves stress tolerance in extreme conditions",
+                "Promotes stronger root development"
+            ],
+            "sizes": [
+                {
+                    "size": "250ml",
+                    "price": 180,
+                    "mrp": 320,
+                    "stock": 100,
+                    "discount": "44%"
+                },
+                {
+                    "size": "500ml",
+                    "price": 265,
+                    "mrp": 475,
+                    "stock": 150,
+                    "discount": "44%"
+                },
+                {
+                    "size": "1Ltr",
+                    "price": 480,
+                    "mrp": 850,
+                    "stock": 80,
+                    "discount": "44%"
+                }
+            ],
+            "application": {
+                "method": "Foliar spray / Drip irrigation",
+                "dosage": "2-3 ml per liter of water",
+                "frequency": "Every 15-20 days or as needed"
+            },
+            "badge": "Best Seller",
+            "rating": 4.9,
+            "reviewCount": 245,
+            "inStock": true
+        },
+        {
+            "id": "ags-k-uptake",
+            "name": "AGS K-Uptake",
+            "slug": "ags-k-uptake",
+            "category": "specialty",
+            "shortDescription": "Potash Mobilizer for Enhanced Fruit Quality",
+            "fullDescription": "AGS K-Uptake is a specialized potash mobilizing bacteria formulation that enhances potassium availability in soil. It promotes better fruit size, weight, and overall crop quality while improving plant resilience to stress and pest attacks.",
+            "composition": "Potash mobilizing bacteria consortium",
+            "benefits": [
+                "Better quality & quantity of produce",
+                "Better plant growth & development",
+                "Enhances fruit size & weight significantly",
+                "Improves stress tolerance",
+                "Increases pest resistance",
+                "Enhances nutrient uptake efficiency"
+            ],
+            "sizes": [
+                {
+                    "size": "1L",
+                    "price": 595,
+                    "mrp": 950,
+                    "stock": 120,
+                    "discount": "37%"
+                },
+                {
+                    "size": "2L",
+                    "price": 1100,
+                    "mrp": 1750,
+                    "stock": 90,
+                    "discount": "37%"
+                },
+                {
+                    "size": "5L",
+                    "price": 2750,
+                    "mrp": 4250,
+                    "stock": 60,
+                    "discount": "35%"
+                }
+            ],
+            "application": {
+                "method": "Soil application / Drip irrigation",
+                "dosage": "2-3 ml per liter of water",
+                "frequency": "Apply at flowering and fruiting stage"
+            },
+            "badge": "Large Size",
+            "rating": 4.8,
+            "reviewCount": 198,
+            "inStock": true
+        },
+        {
+            "id": "high-recharge",
+            "name": "High Recharge",
+            "slug": "high-recharge",
+            "category": "bio",
+            "shortDescription": "Plant Energizer for Fast Stress Recovery",
+            "fullDescription": "High Recharge is a powerful plant energizer formulated with Nitrobenzene and Amino acids. It provides rapid recovery from stress conditions, promotes better flowering and fruiting, and significantly boosts crop yield and quality.",
+            "composition": "Nitrobenzene 40% + Amino Acid 10%",
+            "benefits": [
+                "Fast recovery from stress conditions",
+                "Better flowering & fruiting",
+                "Improves crop quality significantly",
+                "Increases overall yield",
+                "Enhances plant vigor and health",
+                "Suitable for all crops"
+            ],
+            "sizes": [
+                {
+                    "size": "250ml",
+                    "price": 252,
+                    "mrp": 360,
+                    "stock": 200,
+                    "discount": "30%"
+                },
+                {
+                    "size": "500ml",
+                    "price": 450,
+                    "mrp": 650,
+                    "stock": 180,
+                    "discount": "31%"
+                },
+                {
+                    "size": "1L",
+                    "price": 850,
+                    "mrp": 1200,
+                    "stock": 100,
+                    "discount": "29%"
+                }
+            ],
+            "application": {
+                "method": "Foliar spray",
+                "dosage": "1-2 ml per liter of water",
+                "frequency": "Apply during stress periods or every 15 days"
+            },
+            "badge": "Popular",
+            "rating": 5.0,
+            "reviewCount": 312,
+            "inStock": true
+        },
+        {
+            "id": "ags-zyme",
+            "name": "AGS Zyme",
+            "slug": "ags-zyme",
+            "category": "bio",
+            "shortDescription": "Plant Growth Stimulant with Enzymes",
+            "fullDescription": "AGS Zyme is an advanced plant growth stimulant enriched with natural plant hormones and enzymes. It promotes vigorous growth, enhances root development, increases flowering, and improves overall yield quality across all crop types.",
+            "composition": "Plant growth hormones + Enzyme complex",
+            "benefits": [
+                "Promotes vigorous plant growth",
+                "Better root system development",
+                "Increases flowering substantially",
+                "Improves yield quality",
+                "Enhances nutrient absorption",
+                "Boosts plant immunity"
+            ],
+            "sizes": [
+                {
+                    "size": "250ml",
+                    "price": 195,
+                    "mrp": 290,
+                    "stock": 150,
+                    "discount": "33%"
+                },
+                {
+                    "size": "500ml",
+                    "price": 360,
+                    "mrp": 550,
+                    "stock": 120,
+                    "discount": "35%"
+                },
+                {
+                    "size": "1L",
+                    "price": 680,
+                    "mrp": 1000,
+                    "stock": 90,
+                    "discount": "32%"
+                }
+            ],
+            "application": {
+                "method": "Foliar spray / Drip irrigation",
+                "dosage": "2 ml per liter of water",
+                "frequency": "Every 15-20 days throughout crop cycle"
+            },
+            "rating": 4.9,
+            "reviewCount": 176,
+            "inStock": true
+        },
+        {
+            "id": "ags-fungal",
+            "name": "AGS Fungal",
+            "slug": "ags-fungal",
+            "category": "bio",
+            "shortDescription": "Bio-Fungicide for Disease Control",
+            "fullDescription": "AGS Fungal is an organic bio-fungicide containing Trichoderma viride, a beneficial fungus that controls various fungal diseases. It's completely safe for the environment, leaves no harmful residues, and improves plant immunity naturally.",
+            "composition": "Trichoderma viride (minimum 1 × 10^9 CFU/gm)",
+            "benefits": [
+                "Controls wide range of fungal diseases",
+                "100% safe for environment",
+                "No chemical residue",
+                "Improves plant immunity naturally",
+                "Enhances soil health",
+                "Compatible with organic farming"
+            ],
+            "sizes": [
+                {
+                    "size": "200gm",
+                    "price": 525,
+                    "mrp": 660,
+                    "stock": 110,
+                    "discount": "20%"
+                },
+                {
+                    "size": "400gm",
+                    "price": 980,
+                    "mrp": 1230,
+                    "stock": 85,
+                    "discount": "20%"
+                },
+                {
+                    "size": "800gm",
+                    "price": 1850,
+                    "mrp": 2300,
+                    "stock": 50,
+                    "discount": "20%"
+                }
+            ],
+            "application": {
+                "method": "Soil application / Foliar spray",
+                "dosage": "5-10 gm per liter of water",
+                "frequency": "Apply at first sign of disease or preventively"
+            },
+            "badge": "New",
+            "rating": 4.9,
+            "reviewCount": 134,
+            "inStock": true
+        },
+        {
+            "id": "rocket-power-a-to-z",
+            "name": "Rocket Power A to Z",
+            "slug": "rocket-power-a-to-z",
+            "category": "specialty",
+            "shortDescription": "Complete Micronutrient Solution",
+            "fullDescription": "Rocket Power A to Z is a comprehensive micronutrient formulation containing all essential trace elements. It prevents and corrects micronutrient deficiencies, ensures complete nutrition, and significantly increases crop productivity and quality.",
+            "composition": "All essential micronutrients (Zn, Fe, Mn, Cu, B, Mo) in chelated form",
+            "benefits": [
+                "Complete plant nutrition",
+                "Prevents micronutrient deficiencies",
+                "Better crop health & vigor",
+                "Increases productivity substantially",
+                "Improves fruit & grain quality",
+                "Enhances disease resistance"
+            ],
+            "sizes": [
+                {
+                    "size": "2L",
+                    "price": 460,
+                    "mrp": 1260,
+                    "stock": 95,
+                    "discount": "63%"
+                },
+                {
+                    "size": "5L",
+                    "price": 1100,
+                    "mrp": 2950,
+                    "stock": 60,
+                    "discount": "63%"
+                }
+            ],
+            "application": {
+                "method": "Foliar spray",
+                "dosage": "2-3 ml per liter of water",
+                "frequency": "Every 15 days or as per crop requirement"
+            },
+            "rating": 4.8,
+            "reviewCount": 203,
+            "inStock": true
+        },
+        {
+            "id": "amino-silk",
+            "name": "Amino Silk",
+            "slug": "amino-silk",
+            "category": "specialty",
+            "shortDescription": "Silicon + Amino Acid for Plant Strength",
+            "fullDescription": "Amino Silk is a premium formulation combining Silicon and Amino Acids. It strengthens plant structure, improves pest and disease resistance, enhances stress tolerance, and significantly improves crop quality and shelf life.",
+            "composition": "Silicon 70% + Amino Acid 30%",
+            "benefits": [
+                "Strengthens plant cell structure",
+                "Improves pest & disease resistance",
+                "Better stress tolerance",
+                "Enhanced crop quality",
+                "Increases fruit firmness",
+                "Improves post-harvest shelf life"
+            ],
+            "sizes": [
+                {
+                    "size": "250gm",
+                    "price": 295,
+                    "mrp": 390,
+                    "stock": 130,
+                    "discount": "24%"
+                },
+                {
+                    "size": "500gm",
+                    "price": 560,
+                    "mrp": 750,
+                    "stock": 100,
+                    "discount": "25%"
+                }
+            ],
+            "application": {
+                "method": "Foliar spray",
+                "dosage": "1-2 gm per liter of water",
+                "frequency": "Every 15-20 days, especially during stress"
+            },
+            "badge": "Premium",
+            "rating": 5.0,
+            "reviewCount": 189,
+            "inStock": true
+        },
+        {
+            "id": "kasturi-plus",
+            "name": "Kasturi Plus",
+            "slug": "kasturi-plus",
+            "category": "bio",
+            "shortDescription": "Biostimulant for Flowering & Fruiting",
+            "fullDescription": "Kasturi Plus is a specialized biostimulant made from natural plant extracts. It dramatically improves flowering and fruit set, enhances natural aroma and flavor, and increases the shelf life of produce, making it ideal for premium quality crops.",
+            "composition": "Natural plant extracts & growth promoters",
+            "benefits": [
+                "Improves flowering substantially",
+                "Better fruit set percentage",
+                "Enhances natural aroma & flavor",
+                "Increases shelf life of produce",
+                "Improves fruit color & appearance",
+                "Suitable for all fruit crops"
+            ],
+            "sizes": [
+                {
+                    "size": "50ml",
+                    "price": 290,
+                    "mrp": 550,
+                    "stock": 140,
+                    "discount": "47%"
+                },
+                {
+                    "size": "100ml",
+                    "price": 520,
+                    "mrp": 980,
+                    "stock": 110,
+                    "discount": "47%"
+                }
+            ],
+            "application": {
+                "method": "Foliar spray",
+                "dosage": "0.5-1 ml per liter of water",
+                "frequency": "Apply at pre-flowering and fruit development stage"
+            },
+            "rating": 4.9,
+            "reviewCount": 167,
+            "inStock": true
+        },
+        {
+            "id": "high-power-gel",
+            "name": "High Power Gel",
+            "slug": "high-power-gel",
+            "category": "specialty",
+            "shortDescription": "All in One Complete Plant Nutrition",
+            "fullDescription": "High Power Gel is a comprehensive all-in-one solution combining NPK, micronutrients, and humic acid. It provides complete plant nutrition, improves all growth parameters, and offers a cost-effective solution for modern farming needs.",
+            "composition": "NPK (19:19:19) + Micronutrients + Humic Acid",
+            "benefits": [
+                "Complete plant nutrition in one product",
+                "Multi-purpose application",
+                "Improves all crop parameters",
+                "Cost-effective solution",
+                "Enhances nutrient use efficiency",
+                "Suitable for all crops & stages"
+            ],
+            "sizes": [
+                {
+                    "size": "250gm",
+                    "price": 270,
+                    "mrp": 420,
+                    "stock": 160,
+                    "discount": "36%"
+                },
+                {
+                    "size": "500gm",
+                    "price": 510,
+                    "mrp": 790,
+                    "stock": 130,
+                    "discount": "35%"
+                },
+                {
+                    "size": "1Kg",
+                    "price": 950,
+                    "mrp": 1450,
+                    "stock": 90,
+                    "discount": "34%"
+                }
+            ],
+            "application": {
+                "method": "Foliar spray / Drip irrigation",
+                "dosage": "2-3 gm per liter of water",
+                "frequency": "Every 15-20 days throughout crop cycle"
+            },
+            "badge": "All in One",
+            "rating": 4.8,
+            "reviewCount": 221,
+            "inStock": true
+        },
+        {
+            "id": "ags-anti",
+            "name": "AGS Anti (Antigravity Agriculture)",
+            "slug": "ags-anti",
+            "category": "specialty",
+            "shortDescription": "Revolutionary Antigravity Agriculture Technology",
+            "fullDescription": "AGS Anti represents cutting-edge Antigravity Agriculture Technology, a revolutionary farming method that reduces stress on plants, improves nutrient uptake efficiency, and promotes sustainable agriculture practices for the future of farming.",
+            "composition": "Proprietary antigravity technology system",
+            "benefits": [
+                "Revolutionary farming methodology",
+                "Significantly reduces plant stress",
+                "Improves nutrient uptake efficiency",
+                "Promotes sustainable agriculture",
+                "Reduces water requirement",
+                "Future of modern farming"
+            ],
+            "sizes": [
+                {
+                    "size": "Custom",
+                    "price": 0,
+                    "mrp": 0,
+                    "stock": 10,
+                    "discount": "Contact for pricing"
+                }
+            ],
+            "application": {
+                "method": "Specialized system installation",
+                "dosage": "As per system specifications",
+                "frequency": "Continuous application system"
+            },
+            "badge": "Revolutionary",
+            "rating": 4.9,
+            "reviewCount": 45,
+            "inStock": true,
+            "contactForPrice": true
+        }
+    ]
+}

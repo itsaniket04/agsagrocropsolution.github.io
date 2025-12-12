@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Product Details - AGS Agro Crop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product-detail.css">
+</head>
+
+<body>
+    <!-- Header (using existing site header) -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🌱</span>
+                <span class="brand-text">AGS Agro Crop Solution</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#products" class="nav-link active">Products</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions" id="navActions">
+                <div id="loggedOutNav">
+                    <button class="btn-secondary" onclick="window.location.href='login.html'">Login</button>
+                    <button class="btn-primary" onclick="window.location.href='signup.html'">Sign Up</button>
+                </div>
+                <div id="loggedInNav" style="display: none;">
+                    <button class="btn-cart" id="cartBtn" onclick="window.location.href='cart.html'">
+                        🛒 Cart <span class="cart-badge" id="cartBadge">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Loading State -->
+    <div id="loading" class="loading" style="display: none;">
+        <p>Loading product details...</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="error" class="error-message" style="display: none;">
+        <h2>Product Not Found</h2>
+        <p>Sorry, the product you're looking for doesn't exist.</p>
+        <button class="btn btn-primary" onclick="window.location.href='index.html#products'">Back to Products</button>
+    </div>
+
+    <!-- Product Detail Container -->
+    <div id="product-container" class="product-detail-container" style="display: none;">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <a href="index.html#products">Products</a>
+            <span>›</span>
+            <span id="breadcrumb-product">Product</span>
+        </div>
+
+        <!-- Main Product Section -->
+        <div class="product-main">
+            <!-- Image Gallery -->
+            <div class="product-gallery">
+                <div class="main-image" id="mainImage">
+                    <span class="image-placeholder">🌿</span>
+                </div>
+                <div class="thumbnail-gallery" id="thumbnailGallery">
+                    <!-- Thumbnails will be added dynamically -->
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <div id="productBadge"></div>
+                <h1 id="productName">Product Name</h1>
+
+                <div class="product-rating">
+                    <div class="stars" id="productStars">⭐⭐⭐⭐⭐</div>
+                    <span class="rating-count" id="ratingCount">(0 reviews)</span>
+                </div>
+
+                <div class="product-price">
+                    <span class="current-price" id="currentPrice">₹0</span>
+                    <span class="original-price" id="originalPrice">₹0</span>
+                    <span class="discount-badge" id="discountBadge">0% OFF</span>
+                </div>
+
+                <p class="short-description" id="shortDescription"></p>
+
+                <div class="product-options">
+                    <!-- Size Selection -->
+                    <div class="option-group">
+                        <label class="option-label">Select Size:</label>
+                        <div class="size-options" id="sizeOptions">
+                            <!-- Size options will be added dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Quantity Selection -->
+                    <div class="option-group">
+                        <label class="option-label">Quantity:</label>
+                        <div class="quantity-selector">
+                            <div class="qty-controls">
+                                <button class="qty-btn" id="qtyMinus" onclick="changeQuantity(-1)">−</button>
+                                <input type="number" class="qty-input" id="quantity" value="1" min="1" max="999"
+                                    readonly>
+                                <button class="qty-btn" id="qtyPlus" onclick="changeQuantity(1)">+</button>
+                            </div>
+                            <span class="stock-status" id="stockStatus">In Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="product-actions">
+                    <button class="btn-add-cart" id="addToCartBtn" onclick="addToCart()">
+                        🛒 Add to Cart
+                    </button>
+                    <button class="btn-buy-now" id="buyNowBtn" onclick="buyNow()">
+                        ⚡ Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Tabs -->
+        <div class="product-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab('description')">Description</button>
+                <button class="tab-btn" onclick="switchTab('specifications')">Specifications</button>
+                <button class="tab-btn" onclick="switchTab('benefits')">Benefits</button>
+                <button class="tab-btn" onclick="switchTab('usage')">Usage Instructions</button>
+            </div>
+
+            <!-- Description Tab -->
+            <div id="description-tab" class="tab-content active">
+                <p id="fullDescription"></p>
+            </div>
+
+            <!-- Specifications Tab -->
+            <div id="specifications-tab" class="tab-content">
+                <table class="specs-table" id="specsTable">
+                    <!-- Specifications will be added dynamically -->
+                </table>
+            </div>
+
+            <!-- Benefits Tab -->
+            <div id="benefits-tab" class="tab-content">
+                <ul class="benefits-list" id="benefitsList">
+                    <!-- Benefits will be added dynamically -->
+                </ul>
+            </div>
+
+            <!-- Usage Instructions Tab -->
+            <div id="usage-tab" class="tab-content">
+                <div class="application-info" id="applicationInfo">
+                    <!-- Application details will be added dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 AGS Agro Crop Solution. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="product-detail.js"></script>
+</body>
+
+</html>
